@@ -1,15 +1,14 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
-code: model
+code: .
 command: >-
-  python 
-  --
-  --
+  python ./model/train.py 
+  --training_data ${{inputs.diabetes}}
 inputs:
-  training_data: 
-    type: uri_folder 
-    path: 
-  reg_rate: 0.01
-environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
-compute: 
-experiment_name: 
-description: 
+  diabetes:
+    type: uri_file 
+    path: azureml:diavetes_data:1 
+    mode: ro_mount
+environment: azureml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu@latest
+compute: mcarrasco1
+experiment_name: diabetes-data-example-nomlflow
+description: Train a classification model on diabetes data using a registered dataset as input.

@@ -1,0 +1,10 @@
+artifact_location: file:///Users/mariflor/mslearn-mlops/mlruns/0/models/m-d815b14eb9d446dc8342ddd9699e1fa2/artifacts
+creation_timestamp: 1750629319132
+experiment_id: '0'
+last_updated_timestamp: 1750629322347
+model_id: m-d815b14eb9d446dc8342ddd9699e1fa2
+model_type: null
+name: model
+source_run_id: 0434ebfcd1404889b027078202273214
+status: 2
+status_message: null

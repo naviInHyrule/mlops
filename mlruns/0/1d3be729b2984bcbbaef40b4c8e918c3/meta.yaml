@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/mariflor/mslearn-mlops/mlruns/0/1d3be729b2984bcbbaef40b4c8e918c3/artifacts
+end_time: 1750115929603
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1d3be729b2984bcbbaef40b4c8e918c3
+run_name: caring-sheep-893
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750115926300
+status: 3
+tags: []
+user_id: mariflor

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/mariflor/mslearn-mlops/mlruns/0/0434ebfcd1404889b027078202273214/artifacts
+end_time: 1750629324862
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0434ebfcd1404889b027078202273214
+run_name: lyrical-boar-355
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750629318703
+status: 3
+tags: []
+user_id: mariflor
