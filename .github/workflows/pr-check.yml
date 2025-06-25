@@ -1,0 +1,11 @@
+name: Pull Request Check
+
+on:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Placeholder
+      run: echo "Will add code checks here in next challenge"
