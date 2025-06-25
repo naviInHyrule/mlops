@@ -17,7 +17,6 @@ def main(args):
     # TO DO: enable autologging
     mlflow.autolog()
 
-
     # read data
     df = pd.read_csv(args.training_data)
 
@@ -36,6 +35,7 @@ def main(args):
     joblib.dump(value=model, filename=model_name)
 
 def split_data(df):
+    # split data into features and target variable
     X, y = df[['Pregnancies','PlasmaGlucose','DiastolicBloodPressure','TricepsThickness','SerumInsulin','BMI','DiabetesPedigree','Age']].values, df['Diabetic'].values
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=0)
     return X_train, X_test, y_train, y_test 
