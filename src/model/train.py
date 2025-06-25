@@ -15,7 +15,7 @@ from sklearn.datasets import load_diabetes
 # define functions
 def main(args):
     # TO DO: enable autologging
-    #mlflow.autolog()
+    mlflow.autolog()
 
 
     # read data
