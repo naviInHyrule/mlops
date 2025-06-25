@@ -1,11 +1,43 @@
-name: Pull Request Check
+name: Pull Request Code Checks
 
 on:
   pull_request:
 
 jobs:
-  check:
+  lint:
+    name: Run Flake8 Linter
     runs-on: ubuntu-latest
     steps:
-    - name: Placeholder
-      run: echo "Will add code checks here in next challenge"
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'  # or your project's version
+
+    - name: Install flake8
+      run: pip install flake8
+
+    - name: Run flake8
+      run: flake8 src/ tests/
+
+  test:
+    name: Run Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install pytest
+
+    - name: Run tests
+      run: pytest tests/
